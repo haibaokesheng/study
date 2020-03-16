@@ -26,6 +26,7 @@ class Solution:
     # 双指针    
     def compressString_1(self, S: str) -> str:
         N = len(S)
+        print(N)
         res = ''
         i = 0
         while i < N:
@@ -34,7 +35,7 @@ class Solution:
                 j += 1
             res += S[i] + str(j - i)
             i = j
-    
+  
         if len(res) < len(S):
             return res
         else:
