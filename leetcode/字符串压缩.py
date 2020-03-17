@@ -45,5 +45,4 @@ a = Solution()
 S = "aabcccccaa"
 print(a.compressString(S))
 
-
 print(a.compressString_1(S))
