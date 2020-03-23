@@ -5,7 +5,7 @@ Created on Sat Feb 29 12:06:15 2020
 @author: haibao
 """
 class Solution:
-    def getLeastNumbers(self, arr: List[int], k: int) -> List[int]:
+    def getLeastNumbers(self, arr,k):
         if k==0:
             return []
         #最小的k个数 最大堆
