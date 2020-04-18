@@ -1,3 +1,11 @@
+'''
+@Author: your name
+@Date: 2020-03-19 19:35:19
+@LastEditTime: 2020-04-07 22:56:09
+@LastEditors: Please set LastEditors
+@Description: In User Settings Edit
+@FilePath: \刷题人生\python学习\可变参数.py
+'''
 # -*- coding: utf-8 -*-
 """
 Created on Thu Mar 19 19:35:04 2020

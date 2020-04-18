@@ -27,7 +27,7 @@ phone = Phone()
 """
 二 类方法
     1.定义需要依赖装饰器@classmethod
-    2.类方法中才参数不是一个对象，而是类
+    2.类方法中参数不是一个对象，而是类
     3.类方法中只可以使用类属性
     4.类方法中不可以使用普通方法
 作用：
@@ -48,7 +48,7 @@ summary
 普通方法与 两者的区别
     1.每天装饰器
     2.普通方法永远是依赖对象，因为每个普通方法都有一个self
-    3.只有创建了对象，才可以调用普通方法，负责无法使用
+    3.只有创建了对象，才可以调用普通方法，否则无法使用
 """ 
 class Person:
     __age =18
@@ -107,8 +107,8 @@ class Person:
     #     return position #地址
     def __call__(self,*args,**kwargs):
         print('--------->call')
-        print("执行对象得到参数是",name)
+        print("执行对象得到参数是",*args)
 
 p = Person('jack')
 print(p)
-p('jack')        
+p('jack','hep')

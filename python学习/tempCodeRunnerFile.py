@@ -9,8 +9,8 @@ class Person:
     #     return position #地址
     def __call__(self,*args,**kwargs):
         print('--------->call')
-        print("执行对象得到参数是",name)
+        print("执行对象得到参数是",*args)
 
 p = Person('jack')
 print(p)
-p()        
+p('jack','hep')

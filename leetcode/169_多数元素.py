@@ -1,3 +1,11 @@
+'''
+@Author: your name
+@Date: 2020-03-13 21:33:32
+@LastEditTime: 2020-04-05 20:25:14
+@LastEditors: Please set LastEditors
+@Description: In User Settings Edit
+@FilePath: \刷题人生\leetcode\169_多数元素.py
+'''
 # -*- coding: utf-8 -*-
 """
 Created on Fri Mar 13 21:33:03 2020

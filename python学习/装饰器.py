@@ -1,3 +1,11 @@
+'''
+@Author: your name
+@Date: 2020-03-20 12:33:03
+@LastEditTime: 2020-04-08 17:21:57
+@LastEditors: Please set LastEditors
+@Description: In User Settings Edit
+@FilePath: \刷题人生\python学习\装饰器.py
+'''
 # -*- coding: utf-8 -*-
 """
 Created on Fri Mar 20 12:29:22 2020
@@ -26,7 +34,6 @@ def house():
 #调用函数 house
 house()    
 print()
-
 #多层装饰器
 def decorate_1(func):
     print("--->1 start")
@@ -68,3 +75,7 @@ def street():
     print("新修的路是大马路")
 street()    
 
+
+import sys
+#print(sys.path)
+print(sys.argv)

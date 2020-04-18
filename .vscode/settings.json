@@ -1,9 +1,0 @@
-{
-    "python.pythonPath": "D:\\software\\Anaconda3\\python.exe",
-    "fileheader.Author": "Siyuan Liu",
-    "fileheader.LastModifiedBy": "Siyuan Liu",
-    "code-runner.executorMap": {
-        "python":"$pythonPath $fullFileName",
-    }
-
-}

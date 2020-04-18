@@ -1,3 +1,11 @@
+'''
+@Author: your name
+@Date: 2020-03-20 17:30:00
+@LastEditTime: 2020-04-08 17:01:09
+@LastEditors: Please set LastEditors
+@Description: In User Settings Edit
+@FilePath: \python学习\匿名函数.py
+'''
 # -*- coding: utf-8 -*-
 """
 Created on Fri Mar 20 17:29:48 2020
@@ -13,12 +21,16 @@ def func(x,y,func):
     print(func)   
     print (func(x,y))   
 func(1,2,lambda a,b:a+b)
+
 #匿名函数与内置函数结合使用
 list1=[1,2,3,4,5,6]
 m = max(list1)
-list2= [{'a':10,'b':12},{'a':22,'b':11}]
+# 找到 a 数值最大的字典
+list2= [{'a':10,'b':12},{'a':1,'b':11}]
 m = max(list2,key=lambda x:x['a'])
 print(m)
+
+
 from functools import reduce
 tuple1=(1,2,3,4)
 result = reduce(lambda x,y:x+y,tuple1)

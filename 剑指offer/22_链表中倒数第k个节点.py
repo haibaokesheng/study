@@ -16,6 +16,7 @@ def printlist(head):
     while cur!=None:
         print(cur.data)
         cur=cur.next
+
 def build():
     i = 1
     head = Node()
@@ -25,9 +26,10 @@ def build():
         temp = Node()
         temp.data = i
         cur.next = temp
-        cur = cur.next
+        cur = cur.next  ########实际是将cur引用的位置从当前节点移动到下一节点
         i += 1
     return head
+    
 # 找出第K个节点的值
 def findk(head,k):
     if head ==None or head.next ==None:
@@ -46,6 +48,7 @@ def findk(head,k):
         slow = slow.next
         fast = fast.next
     return slow
+
 def getKthFromEnd(head,k):
     fast = slow = head
     while k>0:
