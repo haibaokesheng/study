@@ -43,7 +43,7 @@ class Solution:
     def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
         # 思路：双指针法。
         slow = fast = head
-        for i in range(n):          # 先让fast走n步
+        for _ in range(n):          # 先让fast走n步
             fast = fast.next
         if fast == None:            # 若走了n步后为None，则表明删除的为head节点
             return head.next

@@ -41,14 +41,29 @@
 # @lc code=start
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
-        res = []
-        def backtrack(nums, path):
-            if not nums:
-                res.append(path)
-                #return 
+        '''
+        LinkedList result = new LinkedList();
+        public void backtrack(路径，选择列表)
+            if(满足结束条件)
+                result.add(结果)
+            for(选择：选择列表)
+                做出选择;
+                backtrack(路径，选择列表);
+                撤销选择;   
+        '''
+        def backtrack(res, path, nums):
+            if len(nums) == 0:
+                res.append(path[:])
+                print(res)
+                return
             for i in range(len(nums)):
-                backtrack(nums[:i] + nums[i+1:], path + [nums[i]])
-        backtrack(nums, [])
+                path.append(nums[i])
+                backtrack(res, path, nums[:i] + nums[i+1:])
+                path.pop()
+
+        res = []
+        path = []
+        backtrack(res, path, nums)
         return res
 # @lc code=end
 

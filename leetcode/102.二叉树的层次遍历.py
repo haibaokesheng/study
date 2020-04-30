@@ -56,24 +56,43 @@
 
 class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
+        # if not root:
+        #     return []
+        # res = [[root.val]]
+        # quene = [root]
+        # while(quene):
+        #     level = []
+        #     size = len(quene)
+        #     for  _ in range(size):################
+        #         node = quene.pop(0)
+        #         if node.left:
+        #             quene.append(node.left)
+        #             level.append(node.left.val)
+        #         if node.right:
+        #             quene.append(node.right)
+        #             level.append(node.right.val)
+        #     if level:
+        #         res.append(level)
+        # #print(res)
+        # return res
+
+        result = []
         if not root:
-            return []
-        res = [[root.val]]
-        quene = [root]
-        while(quene):
-            level = []
-            size = len(quene)
-            for  _ in range(size):################
-                node = quene.pop(0)
+            return result   
+        queues = collections.deque()
+        queues.append(root)
+        while queues:
+            size = len(queues)
+            cur_level = []
+            for _ in range(size):
+                node = queues.popleft()
+                cur_level.append(node.val)
                 if node.left:
-                    quene.append(node.left)
-                    level.append(node.left.val)
+                    queues.append(node.left)
                 if node.right:
-                    quene.append(node.right)
-                    level.append(node.right.val)
-            if level:
-                res.append(level)
-        #print(res)
-        return res
+                    queues.append(node.right)              
+            result.append(cur_level)
+        return result
+        
 # @lc code=end
 
